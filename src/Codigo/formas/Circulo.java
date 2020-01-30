@@ -18,7 +18,7 @@ public class Circulo extends Ellipse2D.Double {
     public Color color = Color.black;
     public boolean relleno = false;
     
-    public Circulo(int _posX, int _posY, int _diametro, Color _color, boolean _relleno) {
+    public Circulo(int _posX, int _posY, int _diametro, Color _color, boolean _relleno,String grosor) {
         super();
         x = _posX;// asigno las posX que me pasan al contruir el objeto a la propiedad x de los ellips2D.Double
         y = _posY;

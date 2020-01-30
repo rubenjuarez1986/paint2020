@@ -12,7 +12,7 @@ import java.awt.Color;
  * @author Ruben
  */
 public class Cuadrado extends Forma{
-     public Cuadrado(int _posX, int _posY, int _lados, Color _color, boolean _relleno) {
+     public Cuadrado(int _posX, int _posY, int _lados, Color _color, boolean _relleno,String grosor) {
         super(_posX, _posY, 4, _color, _relleno);
     }
     

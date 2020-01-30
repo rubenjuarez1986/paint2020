@@ -25,10 +25,10 @@ public class DibujoLibre extends Polygon{
     this.y = posY;
     color = _color;
     }
-    public void dibujate (Graphics2D g2, int posX, int posY,String _trazo){
+    public void dibujate (Graphics2D g2, int posX, int posY,String grosor){
     g2.setColor(color);
     g2.drawLine(posX, posY, x, y);
-    g2.setStroke(new BasicStroke(Float.parseFloat(_trazo)));
+    g2.setStroke(new BasicStroke(Float.parseFloat(grosor)));
     x = posX;
     y = posY;
     }

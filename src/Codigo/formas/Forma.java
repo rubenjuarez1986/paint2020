@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package Codigo.formas;
-
+import java.awt.BasicStroke;
 import java.awt.Color;
 import java.awt.Graphics2D;
 import java.awt.Polygon;
@@ -22,20 +22,27 @@ public class Forma extends Polygon {
     public int y = 0;
 
     public Forma(int _posX, int _posY, int _lados, Color _color, boolean _relleno) {
+        //Inicializa el constructor de la forma con distintos lados
         super(new int[_lados], new int[_lados], _lados);
+        //Guarda el centro de la forma
         this.x = _posX;
         this.y = _posY;
+        //Asigna el color y relleno de la forma
         color = _color;
         relleno = _relleno;
     }
 
-    public void dibujate(Graphics2D g2, int _posX, int _posY) {
- calculaVertices (y -_posY, x- _posX);
+    public void dibujate(Graphics2D g2, int _posX, int _posY,BasicStroke _trazo) {
+        // Redibuja la forma
+ calculaVertices (y -_posY, x - _posX);
+ // Asigna el color de la forma
         g2.setColor(color);
+        // Asigna el relleno de la forma
         if (relleno){
             g2.fill(this);
         }
         else{
+            g2.setStroke(_trazo);
             g2.draw(this);
         }
     }
