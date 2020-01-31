@@ -32,7 +32,7 @@ public class Forma extends Polygon {
         relleno = _relleno;
     }
 
-    public void dibujate(Graphics2D g2, int _posX, int _posY,BasicStroke _trazo) {
+    public void dibujate(Graphics2D g2, int _posX, int _posY,String grosor) {
         // Redibuja la forma
  calculaVertices (y -_posY, x - _posX);
  // Asigna el color de la forma
@@ -42,7 +42,7 @@ public class Forma extends Polygon {
             g2.fill(this);
         }
         else{
-            g2.setStroke(_trazo);
+            g2.setStroke(new BasicStroke(Float.parseFloat(grosor)));
             g2.draw(this);
         }
     }
