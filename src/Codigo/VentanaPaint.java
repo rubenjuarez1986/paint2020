@@ -11,7 +11,6 @@ import Codigo.formas.DibujoLibre;
 import Codigo.formas.Estrella;
 import Codigo.formas.Forma;
 import Codigo.formas.Pentagono;
-import Codigo.formas.Trazo;
 import Codigo.formas.Triangulo;
 
 
@@ -388,21 +387,19 @@ public class VentanaPaint extends javax.swing.JFrame {
         bufferGraphics.drawImage(buffer2, 0, 0, null);
         switch (formaElegida) {
             case 0:
-
                 dibujoLibre.dibujate(bufferGraphics2, evt.getX(), evt.getY(), grosor);
                 break;
-
             case 1:
                 miCirculo.dibujate(bufferGraphics, evt.getX());
                 break;
             case 3:
-                miForma.dibujate(bufferGraphics, evt.getX(), evt.getY(), );
+                miForma.dibujate(bufferGraphics, evt.getX(), evt.getY(),grosor);
                 break;
             case 4:
-                miForma.dibujate(bufferGraphics, evt.getX(), evt.getY(), (jSlider2.getValue()));
+                miForma.dibujate(bufferGraphics, evt.getX(), evt.getY(), grosor);
                 break;
             case 5:
-                miForma.dibujate(bufferGraphics, evt.getX(), evt.getY(), (jSlider2.getValue()));
+                miForma.dibujate(bufferGraphics, evt.getX(), evt.getY(), grosor);
                 break;
             case 6:
                 bufferGraphics2.setColor(Color.WHITE);
@@ -413,7 +410,7 @@ public class VentanaPaint extends javax.swing.JFrame {
                 bufferGraphics2.fillOval(evt.getX(), evt.getY(), 16, 16);
                 break;
             case 256:
-                miForma.dibujate(bufferGraphics, evt.getX(), evt.getY(), (jSlider2.getValue()));
+                miForma.dibujate(bufferGraphics, evt.getX(), evt.getY(), grosor);
                 break;
         }
         repaint(0, 0, 1, 1);
@@ -432,19 +429,19 @@ public class VentanaPaint extends javax.swing.JFrame {
                 break;
             case 3:
                 miForma = new Triangulo(evt.getX(), evt.getY(), 3, panelColores1.colorSeleccionado, relleno);
-                miForma.dibujate(bufferGraphics, evt.getX(), evt.getY(), (jSlider2.getValue()));
+                miForma.dibujate(bufferGraphics, evt.getX(), evt.getY(), grosor);
                 break;
             case 4:
                 miForma = new Cuadrado(evt.getX(), evt.getY(), 4, panelColores1.colorSeleccionado, relleno, grosor);
-                miForma.dibujate(bufferGraphics, evt.getX(), evt.getY(), (jSlider2.getValue()));
+                miForma.dibujate(bufferGraphics, evt.getX(), evt.getY(), grosor);
                 break;
             case 5:
                 miForma = new Pentagono(evt.getX(), evt.getY(), 5, panelColores1.colorSeleccionado, relleno);
-                miForma.dibujate(bufferGraphics, evt.getX(), evt.getY(), (jSlider2.getValue()));
+                miForma.dibujate(bufferGraphics, evt.getX(), evt.getY(), grosor);
                 break;
             case 256:
                 miForma = new Estrella(evt.getX(), evt.getY(), 256, panelColores1.colorSeleccionado, relleno, grosor);
-                miForma.dibujate(bufferGraphics, evt.getX(), evt.getY(), new Trazo(jSlider2.getValue()));
+                miForma.dibujate(bufferGraphics, evt.getX(), evt.getY(), grosor);
                 break;
         }
 
@@ -456,7 +453,7 @@ public class VentanaPaint extends javax.swing.JFrame {
         if (formaElegida == 1) {
             miCirculo.dibujate(bufferGraphics2, evt.getX());
         } else if (formaElegida != 0) {
-            miForma.dibujate(bufferGraphics2, evt.getX(), evt.getY(), (jSlider2.getValue()));
+            miForma.dibujate(bufferGraphics2, evt.getX(), evt.getY(), grosor);
         } else if (formaElegida == 0) {
             dibujoLibre.dibujate(bufferGraphics, evt.getX(), evt.getY(), grosor);
         }
@@ -540,7 +537,6 @@ public class VentanaPaint extends javax.swing.JFrame {
     private void jSpinner1StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jSpinner1StateChanged
         grosor = Integer.toString((int) jSpinner1.getValue() / 12) + "f";
         jSlider2.setValue((int) jSpinner1.getValue());
-
     }//GEN-LAST:event_jSpinner1StateChanged
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
