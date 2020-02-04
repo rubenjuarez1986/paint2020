@@ -5,7 +5,7 @@
  */
 package Codigo;
 
-import Codigo.formas.Trazo;
+
 
 /**
  *

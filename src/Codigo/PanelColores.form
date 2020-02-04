@@ -86,7 +86,12 @@
                       <Component id="Color15" min="-2" pref="21" max="-2" attributes="0"/>
                   </Group>
               </Group>
-              <EmptySpace pref="118" max="32767" attributes="0"/>
+              <EmptySpace pref="37" max="32767" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabel1" min="-2" pref="66" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
           </Group>
           <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
               <Group type="102" attributes="0">
@@ -108,42 +113,51 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="1" attributes="0">
-                  <Component id="Color15" alignment="1" min="-2" pref="21" max="-2" attributes="0"/>
-                  <Component id="Color16" alignment="1" min="-2" pref="21" max="-2" attributes="0"/>
-                  <Component id="Color13" alignment="1" min="-2" pref="21" max="-2" attributes="0"/>
-                  <Component id="Color14" alignment="1" min="-2" pref="21" max="-2" attributes="0"/>
-                  <Component id="Color11" alignment="1" min="-2" pref="21" max="-2" attributes="0"/>
-                  <Component id="Color12" alignment="1" min="-2" pref="21" max="-2" attributes="0"/>
-                  <Component id="Color9" alignment="1" min="-2" pref="21" max="-2" attributes="0"/>
-                  <Component id="Color10" alignment="1" min="-2" pref="21" max="-2" attributes="0"/>
-                  <Component id="Color7" alignment="1" min="-2" pref="21" max="-2" attributes="0"/>
-                  <Component id="Color8" alignment="1" min="-2" pref="21" max="-2" attributes="0"/>
-                  <Component id="Color5" alignment="1" min="-2" pref="21" max="-2" attributes="0"/>
-                  <Component id="Color6" alignment="1" min="-2" pref="21" max="-2" attributes="0"/>
-                  <Component id="Color3" alignment="1" min="-2" pref="21" max="-2" attributes="0"/>
-                  <Component id="Color4" alignment="1" min="-2" pref="21" max="-2" attributes="0"/>
-                  <Component id="Color2" min="-2" pref="21" max="-2" attributes="0"/>
-                  <Component id="Color1" min="-2" pref="21" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="1" attributes="0">
-                  <Component id="Color23" alignment="1" min="-2" pref="21" max="-2" attributes="0"/>
-                  <Component id="Color24" alignment="1" min="-2" pref="21" max="-2" attributes="0"/>
-                  <Component id="Color21" alignment="1" min="-2" pref="21" max="-2" attributes="0"/>
-                  <Component id="Color22" alignment="1" min="-2" pref="21" max="-2" attributes="0"/>
-                  <Component id="Color19" alignment="1" min="-2" pref="21" max="-2" attributes="0"/>
-                  <Component id="Color20" alignment="1" min="-2" pref="21" max="-2" attributes="0"/>
-                  <Component id="Color17" alignment="1" min="-2" pref="21" max="-2" attributes="0"/>
-                  <Component id="Color18" alignment="1" min="-2" pref="21" max="-2" attributes="0"/>
-                  <Component id="Color31" alignment="1" min="-2" pref="21" max="-2" attributes="0"/>
-                  <Component id="Color32" alignment="1" min="-2" pref="21" max="-2" attributes="0"/>
-                  <Component id="Color29" alignment="1" min="-2" pref="21" max="-2" attributes="0"/>
-                  <Component id="Color30" alignment="1" min="-2" pref="21" max="-2" attributes="0"/>
-                  <Component id="Color27" alignment="1" min="-2" pref="21" max="-2" attributes="0"/>
-                  <Component id="Color28" alignment="1" min="-2" pref="21" max="-2" attributes="0"/>
-                  <Component id="Color25" alignment="1" min="-2" pref="21" max="-2" attributes="0"/>
-                  <Component id="Color26" alignment="1" min="-2" pref="21" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" attributes="0">
+                      <Group type="103" groupAlignment="1" attributes="0">
+                          <Component id="Color15" alignment="1" min="-2" pref="21" max="-2" attributes="0"/>
+                          <Component id="Color16" alignment="1" min="-2" pref="21" max="-2" attributes="0"/>
+                          <Component id="Color13" alignment="1" min="-2" pref="21" max="-2" attributes="0"/>
+                          <Component id="Color14" alignment="1" min="-2" pref="21" max="-2" attributes="0"/>
+                          <Component id="Color11" alignment="1" min="-2" pref="21" max="-2" attributes="0"/>
+                          <Component id="Color12" alignment="1" min="-2" pref="21" max="-2" attributes="0"/>
+                          <Component id="Color9" alignment="1" min="-2" pref="21" max="-2" attributes="0"/>
+                          <Component id="Color10" alignment="1" min="-2" pref="21" max="-2" attributes="0"/>
+                          <Component id="Color7" alignment="1" min="-2" pref="21" max="-2" attributes="0"/>
+                          <Component id="Color8" alignment="1" min="-2" pref="21" max="-2" attributes="0"/>
+                          <Component id="Color5" alignment="1" min="-2" pref="21" max="-2" attributes="0"/>
+                          <Component id="Color6" alignment="1" min="-2" pref="21" max="-2" attributes="0"/>
+                          <Component id="Color3" alignment="1" min="-2" pref="21" max="-2" attributes="0"/>
+                          <Component id="Color4" alignment="1" min="-2" pref="21" max="-2" attributes="0"/>
+                          <Component id="Color2" min="-2" pref="21" max="-2" attributes="0"/>
+                          <Component id="Color1" min="-2" pref="21" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="1" attributes="0">
+                          <Component id="Color23" alignment="1" min="-2" pref="21" max="-2" attributes="0"/>
+                          <Component id="Color24" alignment="1" min="-2" pref="21" max="-2" attributes="0"/>
+                          <Component id="Color21" alignment="1" min="-2" pref="21" max="-2" attributes="0"/>
+                          <Component id="Color22" alignment="1" min="-2" pref="21" max="-2" attributes="0"/>
+                          <Component id="Color19" alignment="1" min="-2" pref="21" max="-2" attributes="0"/>
+                          <Component id="Color20" alignment="1" min="-2" pref="21" max="-2" attributes="0"/>
+                          <Component id="Color17" alignment="1" min="-2" pref="21" max="-2" attributes="0"/>
+                          <Component id="Color18" alignment="1" min="-2" pref="21" max="-2" attributes="0"/>
+                          <Component id="Color31" alignment="1" min="-2" pref="21" max="-2" attributes="0"/>
+                          <Component id="Color32" alignment="1" min="-2" pref="21" max="-2" attributes="0"/>
+                          <Component id="Color29" alignment="1" min="-2" pref="21" max="-2" attributes="0"/>
+                          <Component id="Color30" alignment="1" min="-2" pref="21" max="-2" attributes="0"/>
+                          <Component id="Color27" alignment="1" min="-2" pref="21" max="-2" attributes="0"/>
+                          <Component id="Color28" alignment="1" min="-2" pref="21" max="-2" attributes="0"/>
+                          <Component id="Color25" alignment="1" min="-2" pref="21" max="-2" attributes="0"/>
+                          <Component id="Color26" alignment="1" min="-2" pref="21" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
               </Group>
               <EmptySpace pref="17" max="32767" attributes="0"/>
           </Group>
@@ -548,6 +562,23 @@
       <AuxValues>
         <AuxValue name="classDetails" type="java.lang.String" value="Box.Filler.RigidArea"/>
       </AuxValues>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel3">
+      <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="0" green="0" red="0" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="jLabel3"/>
+        <Property name="opaque" type="boolean" value="true"/>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+      </AuxValues>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Color Seleccionado"/>
+      </Properties>
     </Component>
   </SubComponents>
 </Form>

@@ -14,7 +14,7 @@ import javax.swing.JLabel;
  */
 public class PanelColores extends javax.swing.JPanel {
 
-    public Color colorSeleccionado = Color.RED;
+    public Color colorSeleccionado = Color.BLACK;
 
     /**
      * Creates new form PanelColores
@@ -67,6 +67,8 @@ public class PanelColores extends javax.swing.JPanel {
         Color32 = new javax.swing.JLabel();
         filler1 = new javax.swing.Box.Filler(new java.awt.Dimension(10, 0), new java.awt.Dimension(10, 0), new java.awt.Dimension(10, 32767));
         filler2 = new javax.swing.Box.Filler(new java.awt.Dimension(10, 10), new java.awt.Dimension(10, 10), new java.awt.Dimension(10, 10));
+        jLabel3 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
 
         Color1.setBackground(new java.awt.Color(255, 51, 51));
         Color1.setOpaque(true);
@@ -324,6 +326,12 @@ public class PanelColores extends javax.swing.JPanel {
             }
         });
 
+        jLabel3.setBackground(new java.awt.Color(0, 0, 0));
+        jLabel3.setText("jLabel3");
+        jLabel3.setOpaque(true);
+
+        jLabel1.setText("Color Seleccionado");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
@@ -395,7 +403,11 @@ public class PanelColores extends javax.swing.JPanel {
                         .addComponent(Color16, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(Color15, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(118, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 37, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel3)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap())
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
@@ -411,41 +423,47 @@ public class PanelColores extends javax.swing.JPanel {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(22, 22, 22)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(Color15, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Color16, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Color13, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Color14, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Color11, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Color12, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Color9, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Color10, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Color7, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Color8, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Color5, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Color6, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Color3, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Color4, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Color2, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Color1, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(Color23, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Color24, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Color21, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Color22, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Color19, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Color20, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Color17, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Color18, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Color31, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Color32, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Color29, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Color30, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Color27, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Color28, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Color25, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Color26, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jLabel3))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(Color15, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Color16, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Color13, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Color14, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Color11, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Color12, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Color9, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Color10, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Color7, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Color8, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Color5, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Color6, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Color3, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Color4, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Color2, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Color1, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(Color23, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Color24, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Color21, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Color22, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Color19, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Color20, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Color17, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Color18, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Color31, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Color32, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Color29, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Color30, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Color27, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Color28, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Color25, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Color26, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(17, Short.MAX_VALUE))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
@@ -464,6 +482,7 @@ public class PanelColores extends javax.swing.JPanel {
         // Rojo
         JLabel s = (JLabel) evt.getSource();
         colorSeleccionado = s.getBackground();
+        jLabel3.setBackground(colorSeleccionado);
 
 
     }//GEN-LAST:event_Color1MousePressed
@@ -472,6 +491,8 @@ public class PanelColores extends javax.swing.JPanel {
         // Azul
         JLabel s = (JLabel) evt.getSource();
         colorSeleccionado = s.getBackground();
+        jLabel3.setBackground(colorSeleccionado);
+
 
     }//GEN-LAST:event_Color2MousePressed
 
@@ -479,12 +500,15 @@ public class PanelColores extends javax.swing.JPanel {
         // Negro
         JLabel s = (JLabel) evt.getSource();
         colorSeleccionado = s.getBackground();
+        jLabel3.setBackground(colorSeleccionado);
+
     }//GEN-LAST:event_Color3MousePressed
 
     private void Color4MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Color4MousePressed
         // Amarillo
         JLabel s = (JLabel) evt.getSource();
         colorSeleccionado = s.getBackground();
+        jLabel3.setBackground(colorSeleccionado);
 
     }//GEN-LAST:event_Color4MousePressed
 
@@ -492,18 +516,23 @@ public class PanelColores extends javax.swing.JPanel {
         // Blanco
         JLabel s = (JLabel) evt.getSource();
         colorSeleccionado = s.getBackground();
+        jLabel3.setBackground(colorSeleccionado);
+
 
     }//GEN-LAST:event_Color5MousePressed
 
     private void Color6MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Color6MousePressed
         JLabel s = (JLabel) evt.getSource();
         colorSeleccionado = s.getBackground();
+        jLabel3.setBackground(colorSeleccionado);
+
     }//GEN-LAST:event_Color6MousePressed
 
     private void Color7MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Color7MousePressed
         // Rosa
         JLabel s = (JLabel) evt.getSource();
         colorSeleccionado = s.getBackground();
+        jLabel3.setBackground(colorSeleccionado);
 
     }//GEN-LAST:event_Color7MousePressed
 
@@ -512,12 +541,16 @@ public class PanelColores extends javax.swing.JPanel {
         JLabel s = (JLabel) evt.getSource();
         colorSeleccionado = s.getBackground();
 
+        jLabel3.setBackground(colorSeleccionado);
+
     }//GEN-LAST:event_Color8MousePressed
 
     private void Color9MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Color9MousePressed
         // TODO add your handling code here:
         JLabel s = (JLabel) evt.getSource();
         colorSeleccionado = s.getBackground();
+
+        jLabel3.setBackground(colorSeleccionado);
 
     }//GEN-LAST:event_Color9MousePressed
 
@@ -526,12 +559,16 @@ public class PanelColores extends javax.swing.JPanel {
         JLabel s = (JLabel) evt.getSource();
         colorSeleccionado = s.getBackground();
 
+        jLabel3.setBackground(colorSeleccionado);
+
     }//GEN-LAST:event_Color10MousePressed
 
     private void Color11MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Color11MousePressed
         // TODO add your handling code here:
         JLabel s = (JLabel) evt.getSource();
         colorSeleccionado = s.getBackground();
+
+        jLabel3.setBackground(colorSeleccionado);
 
     }//GEN-LAST:event_Color11MousePressed
 
@@ -540,12 +577,16 @@ public class PanelColores extends javax.swing.JPanel {
         JLabel s = (JLabel) evt.getSource();
         colorSeleccionado = s.getBackground();
 
+        jLabel3.setBackground(colorSeleccionado);
+
     }//GEN-LAST:event_Color12MousePressed
 
     private void Color13MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Color13MousePressed
         // TODO add your handling code here:
         JLabel s = (JLabel) evt.getSource();
         colorSeleccionado = s.getBackground();
+
+        jLabel3.setBackground(colorSeleccionado);
 
     }//GEN-LAST:event_Color13MousePressed
 
@@ -554,6 +595,8 @@ public class PanelColores extends javax.swing.JPanel {
         JLabel s = (JLabel) evt.getSource();
         colorSeleccionado = s.getBackground();
 
+        jLabel3.setBackground(colorSeleccionado);
+
     }//GEN-LAST:event_Color14MousePressed
 
     private void Color15MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Color15MousePressed
@@ -561,12 +604,15 @@ public class PanelColores extends javax.swing.JPanel {
         JLabel s = (JLabel) evt.getSource();
         colorSeleccionado = s.getBackground();
 
+        jLabel3.setBackground(colorSeleccionado);
+
     }//GEN-LAST:event_Color15MousePressed
 
     private void Color16MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Color16MousePressed
         // TODO add your handling code here:
         JLabel s = (JLabel) evt.getSource();
         colorSeleccionado = s.getBackground();
+        jLabel3.setBackground(colorSeleccionado);
 
     }//GEN-LAST:event_Color16MousePressed
 
@@ -574,6 +620,7 @@ public class PanelColores extends javax.swing.JPanel {
         // TODO add your handling code here:
         JLabel s = (JLabel) evt.getSource();
         colorSeleccionado = s.getBackground();
+        jLabel3.setBackground(colorSeleccionado);
 
     }//GEN-LAST:event_Color17MousePressed
 
@@ -581,6 +628,7 @@ public class PanelColores extends javax.swing.JPanel {
         // TODO add your handling code here:
         JLabel s = (JLabel) evt.getSource();
         colorSeleccionado = s.getBackground();
+        jLabel3.setBackground(colorSeleccionado);
 
     }//GEN-LAST:event_Color18MousePressed
 
@@ -588,6 +636,7 @@ public class PanelColores extends javax.swing.JPanel {
         // TODO add your handling code here:
         JLabel s = (JLabel) evt.getSource();
         colorSeleccionado = s.getBackground();
+        jLabel3.setBackground(colorSeleccionado);
 
     }//GEN-LAST:event_Color19MousePressed
 
@@ -595,6 +644,7 @@ public class PanelColores extends javax.swing.JPanel {
         // TODO add your handling code here:
         JLabel s = (JLabel) evt.getSource();
         colorSeleccionado = s.getBackground();
+        jLabel3.setBackground(colorSeleccionado);
 
     }//GEN-LAST:event_Color20MousePressed
 
@@ -602,6 +652,7 @@ public class PanelColores extends javax.swing.JPanel {
         // TODO add your handling code here:
         JLabel s = (JLabel) evt.getSource();
         colorSeleccionado = s.getBackground();
+        jLabel3.setBackground(colorSeleccionado);
 
     }//GEN-LAST:event_Color21MousePressed
 
@@ -609,6 +660,7 @@ public class PanelColores extends javax.swing.JPanel {
         // TODO add your handling code here:
         JLabel s = (JLabel) evt.getSource();
         colorSeleccionado = s.getBackground();
+        jLabel3.setBackground(colorSeleccionado);
 
     }//GEN-LAST:event_Color22MousePressed
 
@@ -616,6 +668,7 @@ public class PanelColores extends javax.swing.JPanel {
         // TODO add your handling code here:
         JLabel s = (JLabel) evt.getSource();
         colorSeleccionado = s.getBackground();
+        jLabel3.setBackground(colorSeleccionado);
 
     }//GEN-LAST:event_Color23MousePressed
 
@@ -623,6 +676,7 @@ public class PanelColores extends javax.swing.JPanel {
         // TODO add your handling code here:
         JLabel s = (JLabel) evt.getSource();
         colorSeleccionado = s.getBackground();
+        jLabel3.setBackground(colorSeleccionado);
 
     }//GEN-LAST:event_Color24MousePressed
 
@@ -630,6 +684,7 @@ public class PanelColores extends javax.swing.JPanel {
         // TODO add your handling code here:
         JLabel s = (JLabel) evt.getSource();
         colorSeleccionado = s.getBackground();
+        jLabel3.setBackground(colorSeleccionado);
 
     }//GEN-LAST:event_Color25MousePressed
 
@@ -637,6 +692,7 @@ public class PanelColores extends javax.swing.JPanel {
         // TODO add your handling code here:
         JLabel s = (JLabel) evt.getSource();
         colorSeleccionado = s.getBackground();
+        jLabel3.setBackground(colorSeleccionado);
 
     }//GEN-LAST:event_Color26MousePressed
 
@@ -644,6 +700,7 @@ public class PanelColores extends javax.swing.JPanel {
         // TODO add your handling code here:
         JLabel s = (JLabel) evt.getSource();
         colorSeleccionado = s.getBackground();
+        jLabel3.setBackground(colorSeleccionado);
 
     }//GEN-LAST:event_Color27MousePressed
 
@@ -651,6 +708,7 @@ public class PanelColores extends javax.swing.JPanel {
         // TODO add your handling code here:
         JLabel s = (JLabel) evt.getSource();
         colorSeleccionado = s.getBackground();
+        jLabel3.setBackground(colorSeleccionado);
 
     }//GEN-LAST:event_Color28MousePressed
 
@@ -658,6 +716,7 @@ public class PanelColores extends javax.swing.JPanel {
         // TODO add your handling code here:
         JLabel s = (JLabel) evt.getSource();
         colorSeleccionado = s.getBackground();
+        jLabel3.setBackground(colorSeleccionado);
 
     }//GEN-LAST:event_Color29MousePressed
 
@@ -665,6 +724,7 @@ public class PanelColores extends javax.swing.JPanel {
         // TODO add your handling code here:
         JLabel s = (JLabel) evt.getSource();
         colorSeleccionado = s.getBackground();
+        jLabel3.setBackground(colorSeleccionado);
 
     }//GEN-LAST:event_Color30MousePressed
 
@@ -672,6 +732,7 @@ public class PanelColores extends javax.swing.JPanel {
         // TODO add your handling code here:
         JLabel s = (JLabel) evt.getSource();
         colorSeleccionado = s.getBackground();
+        jLabel3.setBackground(colorSeleccionado);
 
     }//GEN-LAST:event_Color31MousePressed
 
@@ -679,6 +740,7 @@ public class PanelColores extends javax.swing.JPanel {
         // TODO add your handling code here:
         JLabel s = (JLabel) evt.getSource();
         colorSeleccionado = s.getBackground();
+        jLabel3.setBackground(colorSeleccionado);
 
     }//GEN-LAST:event_Color32MousePressed
 
@@ -718,6 +780,8 @@ public class PanelColores extends javax.swing.JPanel {
     private javax.swing.JLabel Color9;
     private javax.swing.Box.Filler filler1;
     private javax.swing.Box.Filler filler2;
+    private javax.swing.JLabel jLabel1;
+    public javax.swing.JLabel jLabel3;
     // End of variables declaration//GEN-END:variables
 
 }
