@@ -20,9 +20,11 @@ import Codigo.formas.Triangulo;
 import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
+import java.awt.Point;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
+import java.util.LinkedList;
 import javax.imageio.ImageIO;
 import javax.swing.filechooser.FileNameExtensionFilter;
 
@@ -33,7 +35,7 @@ import javax.swing.filechooser.FileNameExtensionFilter;
 public class VentanaPaint extends javax.swing.JFrame {
 
     //sirve para poder dibujar en el JPANLE "LIENZO"
-    BufferedImage buffer, buffer2,_colorActual= null;
+    BufferedImage buffer, buffer2, _colorActual = null;
     Graphics2D bufferGraphics, bufferGraphics2, jpanelGraphics = null;
 
     DibujoLibre dibujoLibre = null;
@@ -45,7 +47,6 @@ public class VentanaPaint extends javax.swing.JFrame {
     Linea recta = null;
     Spray miSpray = null;
     private int tamanio;
-    
 
     /**
      * Creates new form VentanaPaint
@@ -68,6 +69,8 @@ public class VentanaPaint extends javax.swing.JFrame {
 
         bufferGraphics.fillRect(0, 0, Lienzo.getWidth(), Lienzo.getHeight());
         bufferGraphics2.setColor(Color.white);
+        bufferGraphics.fillRect(0, 0, Lienzo.getWidth(), Lienzo.getHeight());
+        bufferGraphics2.fillRect(0, 0, Lienzo.getWidth(), Lienzo.getHeight());
 
         bufferGraphics2.fillRect(0, 0, Lienzo.getWidth(), Lienzo.getHeight());
         //enlazamos el Lienzo jPanel cone el JpanelGraphics
@@ -299,6 +302,11 @@ public class VentanaPaint extends javax.swing.JFrame {
         });
 
         jButton13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/pintura.png"))); // NOI18N
+        jButton13.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton13ActionPerformed(evt);
+            }
+        });
 
         jButton14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/pipette_29575.png"))); // NOI18N
         jButton14.addActionListener(new java.awt.event.ActionListener() {
@@ -422,7 +430,6 @@ public class VentanaPaint extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jButton13, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGap(3, 3, 3)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButton14, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(125, 125, 125)
                 .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -464,7 +471,7 @@ public class VentanaPaint extends javax.swing.JFrame {
                 miSpray = new Spray(evt.getX(), evt.getY(), panelColores1.colorSeleccionado);
                 miSpray.dibujate(bufferGraphics2, evt.getX(), evt.getY(), tamanio);
                 break;
-               
+
             case 256:
                 miForma.dibujate(bufferGraphics, evt.getX(), evt.getY(), grosor);
                 break;
@@ -504,7 +511,6 @@ public class VentanaPaint extends javax.swing.JFrame {
                 miSpray = new Spray(evt.getX(), evt.getY(), panelColores1.colorSeleccionado);
                 miSpray.dibujate(bufferGraphics, evt.getX(), evt.getY(), tamanio);
                 break;
-                
 
             case 256:
                 miForma = new Estrella(evt.getX(), evt.getY(), 256, panelColores1.colorSeleccionado, relleno, grosor);
@@ -521,9 +527,35 @@ public class VentanaPaint extends javax.swing.JFrame {
             miForma.dibujate(bufferGraphics2, evt.getX(), evt.getY(), grosor);
         } else if (formaElegida == 2) {
             recta.dibujate(bufferGraphics2, evt.getX(), evt.getY(), grosor);
+        } else if (formaElegida == 14) {
+            int xFlood = evt.getX();
+            int yFlood = evt.getY();
+            int rgb = buffer.getRGB(xFlood, yFlood);
+            Color c = new Color(rgb);
+            fill(xFlood, yFlood, c, panelColores1.colorSeleccionado);
+            jpanelGraphics.drawImage(buffer2, 0, 0, null);
+            bufferGraphics2.drawImage(buffer2, 0, 0, null);
         }
+        jpanelGraphics.drawImage(buffer2, 0, 0, null);
     }//GEN-LAST:event_LienzoMouseReleased
 
+    public <Queue> void fill(int x, int y, Color colorBase, Color colorNuevo) {//relleno usando recursion
+        java.util.Queue<Point> queue = new LinkedList<>();
+        queue.add(new Point(x, y));
+
+        while (!queue.isEmpty()) {
+            Point pt = queue.remove();
+            if (pt.x < 0 || pt.x >= buffer2.getWidth() || pt.y < 0 || pt.y >= buffer2.getHeight() || colorBase.getRGB() != buffer2.getRGB(pt.x, pt.y)) {
+                continue;
+            }
+            buffer2.setRGB(pt.x, pt.y, colorNuevo.getRGB());
+            //jPanelGraphics.drawImage(buffer, 0, 0, null);
+            queue.add(new Point(pt.x - 1, pt.y));
+            queue.add(new Point(pt.x + 1, pt.y));
+            queue.add(new Point(pt.x, pt.y - 1));
+            queue.add(new Point(pt.x, pt.y + 1));
+        }
+    }
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         //paleta de colores de competi
         jDialog1.setVisible(true);
@@ -571,9 +603,9 @@ public class VentanaPaint extends javax.swing.JFrame {
 
             if (extension.equalsIgnoreCase("jpg") || extension.equalsIgnoreCase("png")) {
                 try {
-                   bufferGraphics.drawImage(ImageIO.read(fichero), 0, 0,null);
-                    bufferGraphics2.drawImage(ImageIO.read(fichero), 0, 0,null);
-                   
+                    bufferGraphics.drawImage(ImageIO.read(fichero), 0, 0, null);
+                    bufferGraphics2.drawImage(ImageIO.read(fichero), 0, 0, null);
+
                     repaint(0, 0, 1, 1);
                 } catch (IOException ex) {
                 }
@@ -599,13 +631,13 @@ public class VentanaPaint extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton7ActionPerformed
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
-         formaElegida = 8;
+        formaElegida = 8;
     }//GEN-LAST:event_jButton8ActionPerformed
 
     private void jSpinner1StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jSpinner1StateChanged
         grosor = Integer.toString((int) jSpinner1.getValue() / 12) + "f";
         jSlider2.setValue((int) jSpinner1.getValue());
-        
+
     }//GEN-LAST:event_jSpinner1StateChanged
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
@@ -633,8 +665,13 @@ public class VentanaPaint extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton12ActionPerformed
 
     private void jButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton14ActionPerformed
-       formaElegida = 10;
+        formaElegida = 10;
     }//GEN-LAST:event_jButton14ActionPerformed
+
+    private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
+        // TODO add your handling code here:
+        formaElegida = 14;
+    }//GEN-LAST:event_jButton13ActionPerformed
     /*
     private void jSpinner1StateChanged(javax.swing.event.ChangeEvent evt) {                                       
         grosor=Integer.toString((int) jSpinner1.getValue() / 12) + "f";
